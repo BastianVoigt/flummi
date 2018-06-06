@@ -55,7 +55,7 @@ For gradle users:
 
 For using Flummi in a Java application, initialize it as follows.
 
-    AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
+    AsyncHttpClient asyncHttpClient = new DefaultAsyncHttpClient();
     Flummi flummi = new Flummi(asyncHttpClient, "http://elasticsearch.base.url:9200");
 
 
@@ -69,7 +69,7 @@ initialization and then autowire Flummi in your beans.
 
        @Bean
        public AsyncHttpClient asyncHttpClient() {
-         return new AsyncHttpClient();
+         return new DefaultAsyncHttpClient();
        }
 
        @Bean
